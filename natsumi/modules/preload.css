@@ -51,7 +51,7 @@ SOFTWARE.
     --natsumi-colors-urlbar-background: transparent;
     --natsumi-ff-background-color: color-mix(in srgb, var(--natsumi-primary-color) 15%, black);
 
-    @media (-moz-bool-pref: 'natsumi.theme.colors-colorful') {
+    @media -moz-pref("natsumi.theme.colors-colorful") {
       --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 50%, black 50%);
       --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-primary-color) 40%, black 60%);
       --natsumi-colors-tertiary: color-mix(in srgb, var(--natsumi-primary-color) 15%, black 85%);
@@ -62,18 +62,9 @@ SOFTWARE.
   --natsumi-ff-background: color-mix(in srgb, var(--natsumi-ff-background-color) 40%, transparent);
 
   --natsumi-browser-separation: 6px;
-  --natsumi-browser-border-radius: 8px;
+  --natsumi-browser-border-radius: 12px;
   --natsumi-border-width: 1px;
-  --natsumi-tab-border-radius: 8px;
-
-  @media (-moz-platform: macos) or (-moz-platform: linux) {
-    --natsumi-tab-border-radius: 12px;
-  }
-
-  /* macOS 26 border radius */
-  @media (-moz-mac-tahoe-theme) {
-    --natsumi-browser-border-radius: 12px;
-  }
+  --natsumi-tab-border-radius: 12px;
 }
 
 .tabbrowser-tab {
